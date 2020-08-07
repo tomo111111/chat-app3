@@ -5,10 +5,11 @@
   <%= link_to "チャットを作成する",new_room_path,class:"new-chat" %>
 </div>
 <div class="rooms">
-  <div class="room-name">
-      teacroom1
-    </div>
+  <% current_user.rooms.each do|room| %>
     <div class="room-name">
-      teacroom2
+      <a href="#">
+        <%= room.name %>
+      </a>
     </div>
+  <%end%>
 </div>
