@@ -39,13 +39,17 @@
 
   </div>
 </div>
-<div class="chat-bottom">
+
+<%= form_with model: [@room, @message], html: {class: "form"}, local: true do |f|%>
   <div class="form-input">
-    <input type="text" placeholder="type a message" class="send-message">
+    <%= f.text_field :content,placeholder:"type a message", class:"send-message" %>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class:"hidden" %>
     </label>
-    </div>
-  <input type="submit" value="SEND" class="send">
+    <%= f.submit "SEND", class:"send"%>
+  </div>
+<%end%>
+<div class="chat-bottom">
+  
 </div>
