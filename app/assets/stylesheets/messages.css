@@ -34,9 +34,15 @@ width: 300px;
   width: 300px;
   padding: 0 20px;
 }
-.room-name{
+.room{
+
   color: white;
   margin: 20px 0 40px 0;
+}
+.room-name{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
 }
 .chat{
   width: calc(100vw - 300px);
